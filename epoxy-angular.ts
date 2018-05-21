@@ -1,0 +1,1 @@
+export {EpoxyBind} from './src/epoxy-bind';

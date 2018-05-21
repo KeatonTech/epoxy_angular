@@ -1,27 +1,21 @@
-# NgEpoxy
+# Epoxy for Angular
+### Angular Hooks for Epoxy.js listenable collections.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
+Simply add the *epoxyBind structural directive to the top of any of your templates that use
+at least one Epoxy collection (in this case, 'store'). Angular's change detector will automatically
+be notified whenever any of the dependent Epoxy values change.
 
-## Development server
+```html
+<div *epoxyBind>
+    <h2>{{store.title}}</h2>
+</div>
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+If every data binding in a component references an Epoxy collection this can be optimized further
+by telling epoxyBind to detach the normal change detector, relying exclusively on Epoxy itself.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```html
+<div *epoxyBind="{detach: true}">
+    <h2>{{store.title}}</h2>
+</div>
+```
