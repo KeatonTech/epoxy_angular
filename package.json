@@ -1,6 +1,6 @@
 {
   "name": "ng-epoxy",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "./dist/epoxy-angular.js",
   "types": "./dist/epoxy-angular.d.ts",
   "scripts": {
@@ -9,24 +9,24 @@
     "test_debug": "karma start"
   },
   "dependencies": {
-    "@angular/compiler": "^6.0.2",
-    "@angular/core": "^6.0.2",
-    "epoxyjs": "^0.2.3"
+    "@angular/compiler": "^6.0.3",
+    "@angular/core": "^6.0.3",
+    "epoxyjs": "^0.2.5"
   },
   "devDependencies": {
-    "@angular/common": "^6.0.2",
-    "@angular/platform-browser": "^6.0.2",
-    "@angular/platform-browser-dynamic": "^6.0.2",
+    "@angular/common": "^6.0.3",
+    "@angular/platform-browser": "^6.0.3",
+    "@angular/platform-browser-dynamic": "^6.0.3",
     "@types/core-js": "0.9.43",
     "@types/jasmine": "2.5.37",
-    "core-js": "^2.4.1",
+    "core-js": "^2.5.7",
     "jasmine-core": "^2.99.1",
     "karma": "^2.0.2",
     "karma-chrome-launcher": "^2.2.0",
     "karma-cli": "^1.0.1",
     "karma-jasmine": "^1.1.2",
     "karma-typescript": "^3.0.12",
-    "rxjs": "^6.1.0",
+    "rxjs": "^6.2.0",
     "typescript": "^2.8.3",
     "zone.js": "^0.7.4"
   }

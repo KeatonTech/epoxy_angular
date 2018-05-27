@@ -1,6 +1,6 @@
 
 import { Directive, ViewContainerRef, TemplateRef, OnInit, OnDestroy, Input, EmbeddedViewRef, Renderer } from '@angular/core';
-import { autorun } from 'epoxyjs';
+import { autorunTree } from 'epoxyjs';
 
 @Directive({ selector: '[epoxyBind]' })
 export class EpoxyBind implements OnInit, OnDestroy {
@@ -23,7 +23,7 @@ export class EpoxyBind implements OnInit, OnDestroy {
         if (this.epoxyBind && this.epoxyBind.detach) {
             this.embeddedView.detach();
         }
-        this.onDestroy = autorun(() => this.embeddedView.detectChanges());
+        this.onDestroy = autorunTree(() => this.embeddedView.detectChanges());
     }
 
     ngOnDestroy() {
